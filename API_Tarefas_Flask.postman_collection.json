@@ -1,0 +1,100 @@
+{
+  "info": {
+    "name": "API de Tarefas Flask",
+    "_postman_id": "f0a7d7cd-dbc9-4873-a4e6-b1c24f406f15",
+    "description": "Coleção de requisições para testar a API de Tarefas desenvolvida com Flask e SQLite.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Criar Tarefa",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"Estudar Flask\",\n  \"descricao\": \"Aprender como criar API\",\n  \"concluida\": false\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/tarefas",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["tarefas"]
+        }
+      }
+    },
+    {
+      "name": "Listar Tarefas",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/tarefas",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["tarefas"]
+        }
+      }
+    },
+    {
+      "name": "Obter Tarefa por ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/tarefas/1",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["tarefas", "1"]
+        }
+      }
+    },
+    {
+      "name": "Atualizar Tarefa",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"titulo\": \"Estudar Flask (atualizado)\",\n  \"descricao\": \"Finalizar projeto de API\",\n  \"concluida\": true\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/tarefas/1",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["tarefas", "1"]
+        }
+      }
+    },
+    {
+      "name": "Deletar Tarefa",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/tarefas/1",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["tarefas", "1"]
+        }
+      }
+    }
+  ]
+}
